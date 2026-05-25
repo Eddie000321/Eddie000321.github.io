@@ -11,6 +11,7 @@ on internal tools, data dashboards, browser automation, and backend systems.
 |-- index.html
 |-- assets/
 |   |-- css/site.css
+|   |-- resume/Jaehyeok_Lee_Resume.pdf
 |   `-- js/site.js
 `-- portfolio-website-strategy-2026.md
 ```
@@ -44,7 +45,8 @@ No build step is required.
 ## Content Notes
 
 - Project content is kept in `assets/js/site.js`.
+- The public resume PDF is kept at `assets/resume/Jaehyeok_Lee_Resume.pdf`.
 - Internal work is described only with anonymized or aggregate summaries.
 - Do not add internal URLs, ticket numbers, asset tags, names, raw screenshots,
   credentials, or private workflow details.
-- The current public contact surface is email, GitHub, and LinkedIn only.
+- The current public contact surface is email, GitHub, LinkedIn, and resume PDF.
