@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jaehyeok Lee | Workflow Automation & Operations Software</title>
+    <meta
+      name="description"
+      content="Jaehyeok Lee is a Software Engineering Technology Co-op student building workflow automation, internal tools, data dashboards, browser automation, and backend systems."
+    />
+    <meta name="author" content="Jaehyeok Lee" />
+    <meta name="theme-color" content="#0f766e" />
+
+    <meta property="og:title" content="Jaehyeok Lee | Portfolio" />
+    <meta
+      property="og:description"
+      content="Workflow automation, data dashboards, backend systems, and internal tools for real operational work."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="#hero" aria-label="Jaehyeok Lee home">
+          <span class="brand-mark">JL</span>
+          <span>
+            <strong>Jaehyeok Lee</strong>
+            <small>Software Engineering Technology Co-op</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Open navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#case-studies">Case Studies</a>
+          <a href="#project-map">Project Map</a>
+          <a href="#projects">All Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="hero">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Seeking Fall 2026 Co-op &middot; Toronto / GTA / Remote</p>
+            <h1>I turn messy operational workflows into reliable software.</h1>
+            <p class="hero-lede">
+              I build internal tools, workflow automation, data dashboards, browser automation,
+              and backend systems for real-world operations.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button primary" href="#case-studies">View Case Studies</a>
+              <a class="button secondary" href="#projects">Browse All Projects</a>
+              <a class="button text" href="mailto:eddie000321@outlook.com">Contact Me</a>
+            </div>
+            <div class="focus-tags" aria-label="Portfolio focus areas">
+              <span>Internal Tools</span>
+              <span>Workflow Automation</span>
+              <span>Data Dashboards</span>
+              <span>Backend Systems</span>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Portfolio evidence snapshot">
+            <div class="panel-header">
+              <span>Evidence Snapshot</span>
+              <span>Verified project data</span>
+            </div>
+            <div class="signal-rows">
+              <div>
+                <strong>10.7K</strong>
+                <span>schedule events reconciled</span>
+              </div>
+              <div>
+                <strong>9.6K</strong>
+                <span>availability rows modeled</span>
+              </div>
+              <div>
+                <strong>~410K</strong>
+                <span>TTC delay records loaded</span>
+              </div>
+              <div>
+                <strong>~400</strong>
+                <span>asset-tracking tasks completed</span>
+              </div>
+            </div>
+            <div class="mini-flow" aria-hidden="true">
+              <span>raw data</span>
+              <span>validation</span>
+              <span>review queue</span>
+              <span>dashboard</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="case-studies">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Featured case studies</p>
+            <h2>Practical systems, not isolated demos.</h2>
+            <p>
+              These projects are selected because they show a pattern: take a repeated
+              operational problem, make the data traceable, and build a tool people can review.
+            </p>
+          </div>
+          <div class="case-study-grid" id="featured-case-studies"></div>
+        </div>
+      </section>
+
+      <section class="section tinted" id="project-map">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Project map</p>
+            <h2>Grouped by the kind of problem each project solves.</h2>
+            <p>
+              The full archive is intentionally grouped by workflow type so the work reads as a
+              connected body of evidence instead of a random project list.
+            </p>
+          </div>
+          <div class="map-grid" id="project-map-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="shell">
+          <div class="section-heading compact">
+            <p class="eyebrow">All projects</p>
+            <h2>Full public-safe project archive.</h2>
+            <p>
+              Search or filter across every project and work-output item currently prepared for
+              public portfolio use. Internal projects use anonymized summaries only.
+            </p>
+          </div>
+
+          <div class="project-toolbar" aria-label="Project filters">
+            <label class="search-field">
+              <span class="sr-only">Search projects</span>
+              <input id="project-search" type="search" placeholder="Search projects, stacks, or evidence..." />
+            </label>
+            <div class="filter-row" id="project-filters"></div>
+          </div>
+
+          <div class="project-count" id="project-count" aria-live="polite"></div>
+          <div class="project-grid" id="project-grid"></div>
+        </div>
+      </section>
+
+      <section class="section tinted" id="experience">
+        <div class="shell two-column">
+          <div>
+            <p class="eyebrow">Experience</p>
+            <h2>Current work is the center of the story.</h2>
+            <p class="section-copy">
+              I currently work with Centennial College Information Technology Services, where the
+              strongest thread in my work is turning repeated support, asset, schedule, and
+              offboarding tasks into safer reviewable tools.
+            </p>
+          </div>
+          <div class="timeline" aria-label="Experience timeline">
+            <article>
+              <span>Jan 2026 - Present</span>
+              <h3>Support Technician, IT Integrated Services (Co-op)</h3>
+              <p>
+                Built internal dashboards, Excel trackers, browser automation, and support
+                workflows across ServiceNow/KACE, room scheduling, asset validation, lab resets,
+                and user-facing ITS support.
+              </p>
+            </article>
+            <article>
+              <span>Sep 2023 - Dec 2023</span>
+              <h3>Office Assistant, Medical School Administration Office</h3>
+              <p>
+                Standardized administrative records, resolved first-line IT issues, and wrote SOPs
+                that helped non-technical staff handle recurring tasks.
+              </p>
+            </article>
+            <article>
+              <span>May 2020 - Nov 2021</span>
+              <h3>Administrative and IT Support</h3>
+              <p>
+                Managed access-controlled records, issue logs, recurring reports, and cross-team
+                technical communication in a structured operations environment.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="shell">
+          <div class="section-heading compact">
+            <p class="eyebrow">Skills</p>
+            <h2>Grouped by how I use them.</h2>
+          </div>
+          <div class="skills-grid" id="skills-grid"></div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="shell contact-layout">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Open to Fall 2026 co-op and internship roles.</h2>
+            <p>
+              Best fit: software developer, backend developer, data/analytics engineering,
+              workflow automation, ServiceNow-adjacent, IT operations tooling, and internal
+              systems roles.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="contact-link" href="mailto:eddie000321@outlook.com">eddie000321@outlook.com</a>
+            <a class="contact-link" href="https://github.com/Eddie000321" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/jleedev" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <p>&copy; 2026 Jaehyeok Lee. Public-safe portfolio content.</p>
+        <p>Last content refresh: 2026-05-24</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
