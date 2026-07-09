@@ -1,8 +1,17 @@
 # Jaehyeok Lee Portfolio 2026
 
 Static portfolio site for GitHub Pages or any static host. The site presents
-Jaehyeok Lee as a workflow automation and operations software developer focused
-on internal tools, data dashboards, browser automation, and backend systems.
+Jaehyeok Lee through evidence-led engineering case studies across applied
+computer vision, operational data, workflow automation, and backend systems.
+
+## Experience
+
+- Editorial engineering-journal design with a signal-to-decision visual system
+- Four evidence-led selected-work stories with explicit decisions and boundaries
+- Searchable, filterable archive containing 26 public-safe project summaries
+- Dense responsive project rows that expand into implementation evidence
+- Six capability groups, experience timeline, resume, and contact links
+- Keyboard focus treatment, reduced-motion support, and mobile navigation
 
 ## Structure
 
@@ -11,6 +20,7 @@ on internal tools, data dashboards, browser automation, and backend systems.
 |-- index.html
 |-- assets/
 |   |-- css/site.css
+|   |-- icons/favicon.svg
 |   |-- resume/Jaehyeok_Lee_Resume.pdf
 |   `-- js/site.js
 `-- portfolio-website-strategy-2026.md
@@ -45,6 +55,8 @@ No build step is required.
 ## Content Notes
 
 - Project content is kept in `assets/js/site.js`.
+- Lead case studies expose context, engineering decision, verification evidence,
+  and a known boundary instead of presenting unsupported claims.
 - The public resume PDF is kept at `assets/resume/Jaehyeok_Lee_Resume.pdf`.
 - Internal work is described only with anonymized or aggregate summaries.
 - Do not add internal URLs, ticket numbers, asset tags, names, raw screenshots,
