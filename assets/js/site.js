@@ -29,12 +29,16 @@ const featuredCaseStudies = [
     decision:
       "Built precomputed, client-indexed views and governed review queues; enriched records only when exact source evidence existed and preserved unresolved values as unknown.",
     verification:
-      "The schedule surface reconciles 10.7K events with 9.6K availability rows and passes 19 tests. Publication checks pass 18/18; categorical lineage keeps 77 upstream gaps and one source mismatch visible.",
+      "The schedule surface maps 334 rooms, reconciles 10.8K events with 25.1K room/date availability rows, and passes 20 tests. Browser publication checks cover 41 payload files across 109 browser files, and the sanitizer is idempotent; categorical lineage keeps 77 upstream gaps and one source mismatch visible.",
     limits:
       "Sanitized aggregate description only. Seventy-seven metadata items remain unresolved rather than guessed; private schedules, ticket text, names, and internal URLs are excluded.",
     learning:
       "In operational data, preserving an unknown can be more trustworthy than filling it with a plausible answer; source lineage must travel with every change.",
-    metrics: ["10.7K events", "19 dashboard tests", "18/18 publication checks"],
+    metrics: [
+      "334 rooms · 10.8K events",
+      "25.1K availability rows",
+      "20 tests · 41 payload files checked",
+    ],
     stack: ["JavaScript", "Cloudflare", "Playwright", "Data validation"],
     links: [{ label: "Sanitized demo", href: "https://youtu.be/Qcq_9weiisU" }],
   },
@@ -106,12 +110,13 @@ const projects = [
     summary:
       "Room and lab availability dashboard for lookup, exports, comparison, and work planning.",
     bullets: [
-      "Created a campus schedule dashboard for room/lab availability, lookup, exports, and work planning across 10.7K events and 9.6K rows.",
-      "Added timetable, map, Excel, and PDF exports that turn 9.6K rows into room/date and staff planning outputs.",
+      "Created a campus schedule dashboard for room/lab availability, lookup, exports, and work planning across 334 mapped rooms, 10.8K events, and 25.1K room/date availability rows.",
+      "Added timetable, map, Excel, and PDF exports that turn 25.1K rows into room/date and staff planning outputs.",
       "Designed a static Cloudflare app with precomputed JSON snapshots and client-side indexes for search, filters, comparison, and exports.",
       "Added Playwright PDF export that opens encoded timetable views, waits for render, and generates evidence bundles.",
+      "Added 20 network-free checks for source lineage, evidence enrichment, status labels, and privacy/source-mirror validation.",
     ],
-    metrics: ["10.7K events", "9.6K rows", "Cloudflare"],
+    metrics: ["334 rooms · 10.8K events", "25.1K rows", "20 tests"],
     stack: ["JavaScript", "Cloudflare Pages", "Workers KV", "Playwright"],
     filters: ["Featured", "Operations", "Data", "Automation", "Cloud"],
     links: [{ label: "Sanitized demo", href: "https://youtu.be/Qcq_9weiisU" }],
@@ -256,12 +261,12 @@ const projects = [
     summary:
       "Operations dashboard and worker architecture for support lookup, reconciliation, logs, and debugging.",
     bullets: [
-      "Created an operations dashboard to reduce support lookup friction across 10.7K schedule events and 9.6K availability rows.",
+      "Created an operations dashboard to reduce support lookup friction across 334 mapped rooms, 10.8K schedule events, and 25.1K room/date availability rows verified by a 20-test schedule contract.",
       "Designed local API/worker flows that separated live snapshots, archives, session history, and access events under API budget limits.",
       "Added booking archives, display caching, API logs, and history ledgers for investigation, replay, and debugging.",
       "Added access-event reconciliation across reservation, entry, and usage signals to classify support states.",
     ],
-    metrics: ["10.7K events", "9.6K rows", "API budget controls"],
+    metrics: ["334 rooms · 10.8K events", "25.1K rows", "20-test contract"],
     stack: ["Local API", "Workers", "Dashboards"],
     filters: ["Operations", "Backend", "Data", "QA/Testing"],
     privacy: "Internal sources, URLs, sample data, screenshots, and operational identifiers are excluded.",
@@ -301,11 +306,11 @@ const projects = [
       "Flask and SQLite analytics dashboard for public Express Entry draw data and score comparison views.",
     bullets: [
       "Implemented a Flask/SQLite app that collects Express Entry draw data and shows trend dashboards and score comparison views.",
-      "Added public-data refresh and aggregation workflows for repeatable cutoff, score trend, and applicant-view dashboards.",
+      "Separated the checksum-pinned historical bootstrap from the authenticated live-refresh path for repeatable cutoff, score-trend, and applicant-view dashboards.",
       "Created Chart.js views for draw cadence, program mix, cutoff trends, invitations, and personal score comparison.",
-      "Added 57 offline tests and a blocking schema, duplicate, null-rate, row-count, and freshness contract; a live read-only check covered 426 draws with zero null invitation or CRS fields.",
+      "Added 61 offline tests plus blocking schema, duplicate, null-rate, row-count, freshness, and checksum contracts; empty deployments bootstrap from 426 official IRCC historical draw records while authenticated live refresh remains separate.",
     ],
-    metrics: ["57 offline tests", "426 live rows", "Data-quality contract"],
+    metrics: ["61 offline tests", "426 official IRCC records", "Checksum-pinned fallback"],
     stack: ["Python", "Flask", "SQLite", "Chart.js"],
     filters: ["Data", "Backend", "Full-Stack"],
     links: [{ label: "GitHub", href: "https://github.com/Eddie000321/expressEntryService" }],
