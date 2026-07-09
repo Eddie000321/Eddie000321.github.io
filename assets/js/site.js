@@ -10,12 +10,12 @@ const featuredCaseStudies = [
     decision:
       "Combined video normalization, KLT optical flow, signal processing, and method consensus, then made quality gates return unmeasurable instead of forcing a rate from weak evidence.",
     verification:
-      "Includes 22 Python tests, a public-release guard, and a one-command deterministic synthetic demo: a 24.0 breaths/min target returned 24.0 (0.0 error, 0.983 quality). Weak evidence still returns unmeasurable.",
+      "Includes 25 Python tests, a public-release guard, and a one-command deterministic synthetic demo: a 24.0 breaths/min target returned 24.0 (0.0 error, 0.983 quality). Weak evidence still returns unmeasurable.",
     limits:
       "Non-diagnostic research prototype. It does not claim clinical accuracy, veterinary validation, or physical-device LiDAR validation.",
     learning:
       "Reliable measurement depends as much on rejecting weak evidence as it does on producing an estimate.",
-    metrics: ["22 Python tests", "Synthetic demo: 0.0 error", "Fail-closed quality gates"],
+    metrics: ["25 Python tests", "Synthetic demo: 0.0 error", "Fail-closed quality gates"],
     stack: ["Python", "OpenCV", "SciPy", "SwiftUI", "AVFoundation", "FFmpeg"],
   },
   {
@@ -49,12 +49,12 @@ const featuredCaseStudies = [
     decision:
       "Modeled lifecycle rules in EF Core, aligned the migration snapshot with restrictive deletion policies, and added an in-memory HTTP owner/pet workflow instead of treating the schema as disconnected CRUD tables.",
     verification:
-      "Local verification has 19 passing tests; the Release build reports zero warnings and zero errors, the migration model has no pending drift, and the NuGet audit reports zero known vulnerabilities.",
+      "Verification has 23 passing tests; the Release build reports zero warnings and zero errors, the migration model has no pending drift, and the NuGet audit reports zero known vulnerabilities.",
     limits:
-      "Prototype and development evidence only. HTTP tests use EF InMemory, the alignment migration has not run on a real PostgreSQL dataset, and the latest local evidence is not yet published to the public repository.",
+      "Prototype and development evidence only. HTTP tests use EF InMemory, and the alignment migration has not run against an existing PostgreSQL dataset.",
     learning:
       "A domain model includes data lifecycle and deletion policy, not just table shapes and API endpoints.",
-    metrics: ["19 local tests", "0 Release warnings/errors", "0 NuGet vulnerabilities"],
+    metrics: ["23 tests", "0 Release warnings/errors", "0 NuGet vulnerabilities"],
     stack: [".NET", "C#", "PostgreSQL", "EF Core", "REST APIs"],
     links: [{ label: "GitHub", href: "https://github.com/Eddie000321/CareFlow" }],
   },
@@ -67,14 +67,14 @@ const featuredCaseStudies = [
     problem:
       "Uploaded TXT, PDF, and DOCX files needed consistent chunking, indexing, validation, and reviewable answers.",
     decision:
-      "Separated loaders, chunking, index lifecycle, and API validation; retained compatibility with the existing FAISS index instead of silently rebuilding away prior searchable units.",
+      "Separated loaders, chunking, index lifecycle, and API validation; runtime FAISS indexes and metadata are generated in isolated temporary stores instead of being committed.",
     verification:
-      "Five local tests pass with zero FAISS deprecation warnings, including compatibility with the existing 34-vector index; clean-install CI is configured to treat warnings as errors.",
+      "Seven deterministic tests verify chunking, bounded uploads, TXT/PDF ingest-to-search flow, page-level evidence attribution, rejection paths, and empty-index behavior; pip-audit reports zero known dependency vulnerabilities.",
     limits:
-      "Local applied-search MVP. It does not claim production retrieval quality, multi-tenant security, authentication, or compliance readiness.",
+      "Applied-search MVP. It does not claim production retrieval quality, multi-tenant security, authentication, or compliance readiness.",
     learning:
-      "In a search system, ingestion consistency, index compatibility, and explicit failure boundaries matter as much as answer generation.",
-    metrics: ["5 tests", "0 FAISS warnings", "34-vector index compatibility"],
+      "In a search system, ingestion consistency, isolated generated state, and explicit failure boundaries matter as much as answer generation.",
+    metrics: ["7 deterministic tests", "0 dependency vulnerabilities", "Temporary index stores"],
     stack: ["Python", "FastAPI", "FAISS", "Docker"],
     links: [{ label: "GitHub", href: "https://github.com/Eddie000321/docSearch" }],
   },
@@ -91,9 +91,9 @@ const projects = [
       "Built a non-diagnostic cat respiration pipeline that normalizes phone video, tracks thorax motion with KLT optical flow, and estimates rate by method consensus.",
       "Implemented fail-closed quality gates that return unmeasurable for weak, moving, or conflicting signals and preserve method estimates for review.",
       "Integrated a SwiftUI/AVFoundation iPhone collector with optional depth metadata and RGB fallback, plus Python waveform and JSON/CSV reports.",
-      "Added 22 Python tests, a public-release guard, and a one-command deterministic synthetic demo where a 24.0 breaths/min target returned 24.0 with 0.0 error and 0.983 quality.",
+      "Added 25 Python tests, a public-release guard, and a one-command deterministic synthetic demo where a 24.0 breaths/min target returned 24.0 with 0.0 error and 0.983 quality.",
     ],
-    metrics: ["22 Python tests", "Synthetic demo: 0.0 error", "Explicit unmeasurable state"],
+    metrics: ["25 Python tests", "Synthetic demo: 0.0 error", "Explicit unmeasurable state"],
     stack: ["Python", "OpenCV", "SciPy", "SwiftUI", "AVFoundation", "FFmpeg"],
     filters: ["Featured", "Computer Vision", "Mobile", "Data", "QA/Testing"],
     privacy:
@@ -143,8 +143,9 @@ const projects = [
       "Implemented a .NET 9/PostgreSQL backend for a veterinary EMR, managing owners, pets, clinical notes, lab reports, and lab results through documented REST APIs.",
       "Modeled the medical-record domain with Entity Framework Core and Fluent API migrations to keep schema changes versioned and reproducible.",
       "Generated large development seeds for the veterinary EMR, including ~20K owners, ~24K pets, and historical note/lab records for testing.",
+      "Added request logging, health/metrics checks, and 23 tests covering age logic, deletion guards, an in-memory HTTP workflow, and migration consistency; CI applies the full migration chain to clean PostgreSQL 16.",
     ],
-    metrics: ["~20K owners", "~24K pets", "REST APIs"],
+    metrics: ["23 tests", "~20K owners", "~24K pets"],
     stack: [".NET", "C#", "PostgreSQL", "EF Core"],
     filters: ["Featured", "Backend", "Database", "QA/Testing"],
     privacy: "Prototype/development evidence only; no production clinical compliance claim.",
@@ -176,9 +177,9 @@ const projects = [
     bullets: [
       "Created a FastAPI/FAISS search MVP that ingests TXT/PDF/DOCX files, chunks content, and returns ranked evidence with source labels.",
       "Implemented document loaders, chunking, index lifecycle, and API responses so uploads could be searched and cited consistently.",
-      "Added file validation, 10 MB limits, PDF caps, five API tests, Docker packaging, and clean-install CI with warnings treated as errors.",
+      "Added file validation, 10 MB limits, PDF caps, seven deterministic tests, Docker packaging, and clean-install CI with warnings treated as errors.",
     ],
-    metrics: ["TXT/PDF/DOCX", "10 MB limits", "Docker"],
+    metrics: ["7 deterministic tests", "TXT/PDF/DOCX", "10 MB limits"],
     stack: ["Python", "FastAPI", "FAISS", "Docker"],
     filters: ["Featured", "AI/Search", "Backend", "QA/Testing"],
     links: [{ label: "GitHub", href: "https://github.com/Eddie000321/docSearch" }],
@@ -302,9 +303,9 @@ const projects = [
       "Implemented a Flask/SQLite app that collects Express Entry draw data and shows trend dashboards and score comparison views.",
       "Added public-data refresh and aggregation workflows for repeatable cutoff, score trend, and applicant-view dashboards.",
       "Created Chart.js views for draw cadence, program mix, cutoff trends, invitations, and personal score comparison.",
-      "Added 35 offline tests and a blocking schema, duplicate, null-rate, row-count, and freshness contract; a live read-only check covered 426 draws with zero null invitation or CRS fields.",
+      "Added 57 offline tests and a blocking schema, duplicate, null-rate, row-count, and freshness contract; a live read-only check covered 426 draws with zero null invitation or CRS fields.",
     ],
-    metrics: ["35 offline tests", "426 live rows", "Data-quality contract"],
+    metrics: ["57 offline tests", "426 live rows", "Data-quality contract"],
     stack: ["Python", "Flask", "SQLite", "Chart.js"],
     filters: ["Data", "Backend", "Full-Stack"],
     links: [{ label: "GitHub", href: "https://github.com/Eddie000321/expressEntryService" }],
@@ -408,9 +409,9 @@ const projects = [
       "Created a data pipeline for 10 years of monthly Seoul energy data, producing analysis-ready CSV files and summary charts.",
       "Automated ingestion, preprocessing, and visualization so the full analysis reruns with one command.",
       "Separated raw payloads, processed datasets, and reports to make outputs reproducible and easier to validate.",
-      "Added eight network-free tests for exact raw-to-CSV snapshots, byte-stable reruns, stage order, and fail-closed execution.",
+      "Added 11 network-free tests for exact raw-to-CSV snapshots, byte-stable reruns, stage order, source labelling, and fail-closed execution.",
     ],
-    metrics: ["10 years of data", "8 network-free tests"],
+    metrics: ["10 years of data", "11 network-free tests"],
     stack: ["Python", "pandas", "matplotlib", "Public API"],
     filters: ["Data", "Automation", "QA/Testing"],
     privacy: "API keys and private configuration are excluded.",
