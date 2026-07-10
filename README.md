@@ -4,9 +4,25 @@ Static portfolio site for GitHub Pages or any static host. The site presents
 Jaehyeok Lee through evidence-led engineering case studies across applied
 computer vision, operational data, workflow automation, and backend systems.
 
-## Experience
+[![Live portfolio](https://img.shields.io/badge/Live_Portfolio-eddie000321.github.io-006f9c?style=for-the-badge)](https://eddie000321.github.io/)
 
-- Editorial engineering-journal design with a signal-to-decision visual system
+## Preview
+
+| Desktop | Mobile |
+| --- | --- |
+| <img src="screenshots/desktop-preview.png" alt="Portfolio desktop view with the signal-to-decision hero" width="760" /> | <img src="screenshots/mobile-preview.png" alt="Portfolio mobile view with stacked navigation and project evidence" width="260" /> |
+
+### Sanitized operations demo
+
+[![Watch the sanitized operations dashboard demo](https://img.youtube.com/vi/Qcq_9weiisU/hqdefault.jpg)](https://youtu.be/Qcq_9weiisU)
+
+The video uses a public-safe demonstration surface. Private schedules, ticket
+text, names, internal URLs, and operational identifiers are excluded.
+
+## Design and functionality
+
+- All-light technical editorial design with mineral-white surfaces, pale sage and ice-blue section bands, and restrained olive/blue accents
+- Signal-to-decision visual system carried through section transitions and evidence figures
 - Four evidence-led selected-work stories with explicit decisions and boundaries
 - Searchable, filterable archive containing 26 public-safe project summaries
 - Dense responsive project rows that expand into implementation evidence
@@ -23,6 +39,9 @@ computer vision, operational data, workflow automation, and backend systems.
 |   |-- icons/favicon.svg
 |   |-- resume/Jaehyeok_Lee_Resume.pdf
 |   `-- js/site.js
+|-- screenshots/
+|   |-- desktop-preview.png
+|   `-- mobile-preview.png
 `-- portfolio-website-strategy-2026.md
 ```
 
